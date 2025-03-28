@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# 📚 **Bookish**  
+A dynamic platform for book lovers to explore, save, and purchase books with seamless external store integration. **Bookish** offers personalized libraries, advanced search filters, profile management, and multiple API integrations for an enhanced user experience.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## 🏗️ **Features**
 
-In the project directory, you can run:
+### 🔍 **Search & Filter**  
+- Search by **Title**, **Author**, or **ISBN**.  
+- **Sort** by **Newest** or **Relevance**.  
+- Advanced mobile filters with a **slide-up half-screen UI**, inspired by Amazon.  
 
-### `npm start`
+### 📚 **Personal Library**  
+- Add and remove books from your personal library.  
+- Persistent storage using **Firebase Firestore**, accessible across devices.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🔑 **Authentication**  
+- Secure **Firebase Authentication** for user login and signup.  
+- **Profile Management**:
+  - View and update personal details (**Full Name**, **Country**, **State**, **Phone**, **Email**).  
+  - **Avatar Integration** using **Dicebear API**.  
+  - **Email.js** for sending feedback or queries.  
+  - Secure **Password Update** feature.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🔗 **External Store Integration**  
+- Direct purchase links to **Google Play Books**, **Amazon**, and **Flipkart**.  
+- No in-platform price comparison; users are redirected to external stores.
 
-### `npm test`
+### 📤 **Email Integration**  
+- **Email.js** for sending user queries directly via email (not using Web3Forms).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ⚙️ **Tech Stack**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| **Technology**     | **Purpose**                                     |
+|--------------------|-------------------------------------------------|
+| **React.js**        | Frontend framework for building the UI.         |
+| **Firebase**        | Authentication and Firestore database.          |
+| **Dicebear API**    | Generates profile avatars.                      |
+| **Google Books API**| Fetches book details and search results.        |
+| **Email.js**        | Sends contact form queries via email.           |
+| **Vercel**          | Deployment platform for hosting.                |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔌 **API Integrations**
 
-### `npm run eject`
+| **API**             | **Usage**                                       |
+|----------------------|-------------------------------------------------|
+| **Google Books API** | Fetch book details (title, author, category).   |
+| **Firebase**         | Store user data and library information.        |
+| **Dicebear API**     | Generate random avatars for profile pictures.   |
+| **Email.js**         | Send emails for contact forms.                  |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ **Environment Variables**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Create a **.env.local** file in the root of your project and include the following:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```env
+# ✅ Firebase Configuration
+REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+```
 
-## Learn More
+Important Notes:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-Ensure your .env.local file is included in your .gitignore to avoid accidentally pushing sensitive information to GitHub.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- In Vercel, add these environment variables through the dashboard for deployment.
 
-### Code Splitting
+## 🚀 **Getting Started**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### **Prerequisites**
 
-### Analyzing the Bundle Size
+- **Node.js** and **npm** installed on your system.
+- Firebase account for backend services.
+- Email.js account for contact form functionality.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### **Installation**
 
-### Making a Progressive Web App
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/sujalB03/bookish.git
+   ```
+   
+2. **Navigate to the project directory**
+  ```bash
+  cd bookish
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. **Install dependencies**
+  ```bash
+  npm install
+  ```
 
-### Advanced Configuration
+4. **Create your .env.local file with necessary environment variables.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+5. **Start the development server**
+  ```bash
+  npm start
+  ```
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🚀 **Future Enhancements**
 
-### `npm run build` fails to minify
+### 🔍 **1. Advanced Search Features**
+- Add filters for **publication year**, **ratings**, and **price range**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 📚 **2. Categories**
+- Create a dedicated **Categories** section to explore books by genre.
+
+### 💳 **3. Payment Integration**
+- Integrate payment gateways like **Stripe** or **Razorpay**.
+
+### ⭐ **4. Favorites & Reviews**
+- Enable users to **favorite** books and create a personal wishlist.
+- Allow users to write and read **book reviews**.
+
+### 🌙 **5. Dark Mode**
+- Add a theme toggle for **light** and **dark** modes.
+
+### 📱 **6. Mobile Responsiveness**
+- Enhance mobile UI for a better user experience.
+
+### 🔒 **7. Profile Enhancements**
+- Add **social media login** options (Google, Facebook).
+
+### 🏷️ **8. Notifications**
+- Implement **email notifications** for successful purchases or updates.
+- Add in-app notifications for profile updates and library changes.
+
+
+---
+
+✅ *Feel free to suggest additional features by opening an issue or a pull request!*  
+
