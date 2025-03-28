@@ -1,0 +1,114 @@
+/* auth.styles.css */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh; /* Supported in Newer Browser */
+  background-image: url("https://images.unsplash.com/photo-1512820790803-83ca734da794");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+/* Auth card styling for the form */
+.auth-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.auth-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button styling */
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.auth-button:hover {
+  background-color: var(--primary-dark-color);
+}
+
+/* Error message styling */
+.error-message {
+  color: #d9534f;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Footer text */
+.auth-footer-text {
+  font-size: 14px;
+  color: #666;
+  margin-top: 15px;
+}
+
+.auth-footer-text a {
+  color: var(--primary-dark-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-footer-text a:hover {
+  text-decoration: underline;
+}
+
+.not-now-button {
+  margin-top: 8px;
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.not-now-button:hover {
+  color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 30px;
+  }
+
+  .auth-title {
+    font-size: 22px;
+  }
+
+  .auth-button {
+    font-size: 16px;
+  }
+}

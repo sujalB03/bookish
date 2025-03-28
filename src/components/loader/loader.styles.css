@@ -1,0 +1,15 @@
+.loading-container {
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+}
+.loading-gif {
+  width: 200px;
+  height: auto;
+}
+
+.loading-container p {
+  font-size: 1.2rem;
+  color: #333;
+  font-family: "Arial", sans-serif;
+}

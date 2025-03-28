@@ -1,0 +1,237 @@
+.detailSection-container {
+  padding: 1.25rem 0;
+}
+
+.detailSection_book-detail-container {
+  padding: 1rem 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.detailSection_book-category {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.detailSection_category-icon {
+  margin-right: 0.5rem;
+}
+
+.detailSection_book-cover {
+  height: 150px;
+  border-radius: 10px;
+}
+
+.detailSection_book-info {
+  flex-direction: column;
+}
+
+.detailSection_book-title {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.detailSection_book-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.detailSection_book-author span,
+.detailSection_book-published-year {
+  font-size: 1rem;
+  color: #666;
+}
+.detailSection_book-author {
+  font-size: 1rem;
+}
+
+.author-link:link,
+.author-link:visited {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.book-heading-container h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.book-heading-container p {
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.overview-section,
+.buy-book-section {
+  margin: 1.25rem 0;
+  padding: 1rem 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.detailSection_title,
+.section-heading {
+  font-weight: 400;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.detailSection_list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.detailSection_list li {
+  margin: 5px 0;
+}
+
+.detailSection_list li p {
+  font-size: 0.938rem;
+  color: #36454f;
+  min-width: 90px;
+  margin-right: 16px;
+  display: inline-block;
+}
+.detailSection_list li span {
+  color: #353935;
+}
+
+.divider {
+  height: 1px;
+  background: #d3d3d3;
+  margin: 1rem -2rem 0;
+}
+
+.book-description {
+  margin-top: 1rem;
+  line-height: 20px;
+  font-size: 0.938rem;
+}
+.read-more-btn {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 1rem 0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button-div-container {
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+.add-to-favorite-btn,
+.preview-btn,
+.buy-book-button {
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.add-to-favorite-btn,
+.preview-btn {
+  margin-right: 0.5rem;
+  border-radius: 5px;
+}
+.add-to-favorite-btn {
+  background-color: transparent;
+}
+.preview-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.add-to-favorite-btn:hover,
+.buy-book-link:hover .buy-book-button {
+  background-color: #f4f4f4;
+}
+.preview-btn:hover {
+  background-color: var(--primary-dark-color);
+}
+
+.already-added-color {
+  color: blue;
+}
+/* BUY BOOK */
+.buy-book-link {
+  padding: 0.5rem 0;
+}
+
+.buy-book-icon-container > div {
+  display: inherit;
+  margin-right: 1rem;
+}
+.buy-book-button {
+  border-radius: 5px;
+}
+
+/* Responsive for smaller screens than 768 */
+@media (max-width: 768px) {
+  .overview-list-container {
+    flex-wrap: wrap;
+  }
+  .detailSection_book-detail-container,
+  .overview-section,
+  .buy-book-section {
+    padding: 1rem;
+  }
+  .overview-section,
+  .buy-book-section {
+    padding-bottom: 0;
+  }
+  .detailSection_book-cover {
+    height: 100px;
+    border-radius: 8px;
+  }
+  .detailSection_book-title {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+  }
+
+  .detailSection_book-subtitle {
+    font-size: 1rem;
+  }
+  .detailSection_book-author,
+  .detailSection_book-author span,
+  .detailSection_book-published-year {
+    font-size: 0.9rem;
+  }
+
+  .detailSection_list li {
+    font-size: 14px;
+  }
+  .second-list li:first-child {
+    margin-top: 0;
+  }
+  .divider {
+    margin: 1rem -1rem 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .detailSection_book-detail-container,
+  .overview-section,
+  .buy-book-section {
+    padding: 1rem 0.5rem;
+  }
+  .overview-section,
+  .buy-book-section {
+    padding-bottom: 0;
+  }
+  .divider {
+    margin: 1rem -0.5rem 0;
+  }
+  .button-div-container {
+    gap: 12px;
+    flex-direction: column;
+  }
+}

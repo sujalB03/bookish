@@ -1,0 +1,73 @@
+.library-books-container {
+  padding: 2rem 0;
+}
+
+.library-title {
+  font-size: 1.8rem;
+  color: var(--primary-dark-color);
+  margin-bottom: 1rem;
+}
+
+.library-books-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(176px, 1fr));
+  gap: 1rem;
+}
+
+.library-book-item {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fav-book-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.fav-book-title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.library-page-btn-container {
+  margin-top: auto;
+}
+.details-link {
+  display: block;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.details-link:hover {
+  background-color: var(--primary-dark-color);
+}
+.remove-library-button {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  background-color: #e3342f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.remove-library-button:hover {
+  background-color: #cc1f1a;
+}

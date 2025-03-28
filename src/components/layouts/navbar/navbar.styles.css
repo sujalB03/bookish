@@ -1,0 +1,162 @@
+.navbar-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 1rem 0;
+}
+
+.navbar-dark {
+  background-color: #1a202c;
+}
+
+.relative {
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  font-family: "Chivo";
+}
+
+/* Navigation Links */
+.nav-links-container {
+  display: flex;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0 10px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+.profile-icon {
+  display: flex;
+  fill: #fff;
+  transition: 0.2s ease-in;
+}
+.profile-icon:hover {
+  fill: var(--primary-color);
+}
+
+.nav-links:hover {
+  color: var(--primary-color);
+}
+
+/* Buttons */
+.logout-button {
+  background-color: var(--primary-color);
+  color: #000;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.logout-button:hover {
+  background-color: var(--primary-dark-color);
+  color: #fff;
+}
+
+.login-button,
+.signup-button {
+  background-color: transparent;
+  color: var(--primary-color);
+  padding: 5px 15px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-weight: 500;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.signup-button {
+  background-color: var(--primary-color);
+  color: #000;
+}
+
+.login-button:hover {
+  background-color: var(--primary-color);
+  color: #000;
+}
+
+.signup-button:hover {
+  background-color: var(--primary-dark-color);
+  color: #fff;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.7rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-quick-action {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links-container {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #1a202c;
+    width: 100%;
+    z-index: 5;
+    padding: 1rem 0;
+  }
+
+  .nav-links-container.active {
+    display: flex;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-quick-action {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    text-align: -webkit-center;
+  }
+
+  .logout-button,
+  .login-button,
+  .signup-button {
+    margin: 10px 0;
+    width: calc(100% - 2rem);
+    text-align: center;
+  }
+}

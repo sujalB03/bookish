@@ -1,0 +1,64 @@
+.book-listing {
+  padding: 52px 0;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.book-listing-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--primary-dark-color);
+  text-align: left;
+}
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.book-card {
+  width: 100%;
+  margin: 0 auto; /* Center the card */
+}
+
+@media (min-width: 500px) {
+  .book-card {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 500px) {
+  .book-listing {
+    padding: 40px 0;
+  }
+  .book-image {
+    object-fit: contain;
+  }
+  .book-info {
+    padding: 0.625rem;
+  }
+  .book-price {
+    padding-bottom: 0.5rem;
+  }
+  .book-title,
+  .book-price {
+    font-weight: 600;
+  }
+  .book-title {
+    font-size: 1rem;
+  }
+  .book-price {
+    font-size: 1.1rem;
+  }
+  .book-author {
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin: 4px 0;
+  }
+  .details-button {
+    left: 0.625rem;
+    right: 0.625rem;
+  }
+}

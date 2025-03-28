@@ -1,0 +1,88 @@
+.showcase-container {
+  background-image: url("../../../assets/book-bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.showcase-content {
+  width: fit-content;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.showcase-heading {
+  font-size: 2.5rem;
+}
+
+.showcase-heading,
+.showcase-paragraph {
+  color: #fff;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* Scroll Down Button */
+.scroll-down-btn {
+  position: absolute;
+  bottom: 20px;
+
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+}
+/* Scroll Down GIF positioning */
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.scroll-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Bouncing Animation - The Down Arrow*/
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px); /* Move up */
+  }
+  60% {
+    transform: translateY(-5px); /* Move slightly up */
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .showcase-content h2 {
+    font-size: 2.25rem;
+  }
+
+  .showcase-content p {
+    font-size: 1rem;
+  }
+}

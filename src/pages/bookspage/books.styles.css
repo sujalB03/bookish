@@ -1,0 +1,19 @@
+.search-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4%;
+}
+
+.search-header {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 500px) {
+  .search-input-container {
+    padding-top: 5%;
+  }
+}

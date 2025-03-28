@@ -1,0 +1,63 @@
+.footer-container {
+  background-color: #333;
+  padding: 3rem 0;
+}
+
+.footer-form {
+  padding-top: 2rem;
+  width: 50%;
+}
+.form-group {
+  padding: 1rem 0;
+}
+
+.form-input {
+  font-family: "Hanken Grotesk";
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.footer-form textarea {
+  height: 100px;
+  resize: none;
+}
+.form-btn {
+  display: inline-block;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  padding: 0.6rem 1.25rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-btn:hover {
+  background-color: var(--primary-dark-color);
+}
+
+.footer-bottom {
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: #999;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer-form {
+    padding-top: 1rem;
+    width: 100%;
+  }
+
+  .form-group {
+    padding: 0.7rem 0;
+  }
+  .form-input {
+    padding: 0.7rem;
+  }
+}
