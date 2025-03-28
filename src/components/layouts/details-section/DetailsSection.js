@@ -270,10 +270,10 @@ const DetailsSection = () => {
                 </li>
               </ul>
               <ul className="detailSection_list second-list">
-                <li>
+                {/* <li>
                   <p>Format:</p>
                   <span>{}</span>
-                </li>
+                </li> */}
 
                 <li>
                   <p>Published:</p>
