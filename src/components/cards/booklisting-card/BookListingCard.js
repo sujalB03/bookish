@@ -5,7 +5,15 @@ import { Link } from "react-router-dom";
 const BookListingCard = ({ book }) => {
   return (
     <div className="book-card">
-      <img src={book.image} alt={book.title} className="book-image" />
+      <img
+        src={
+          book.image
+            ? book.image
+            : "https://placehold.co/170x250?text=Image%20Not%20Available"
+        }
+        alt={book.title}
+        className="book-image"
+      />
       <div className="book-info">
         <h3 className="book-title">{book.title}</h3>
         <p className="book-author">{book.author}</p>
