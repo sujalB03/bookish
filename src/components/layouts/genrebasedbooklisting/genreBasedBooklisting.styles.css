@@ -108,6 +108,7 @@
 .genre-book-price {
   font-size: 1.2rem;
   font-weight: bold;
+  text-wrap: auto;
   color: var(--primary-color);
   margin-top: 4px;
 }
