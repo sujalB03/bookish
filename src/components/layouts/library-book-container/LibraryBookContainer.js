@@ -65,7 +65,10 @@ const LibraryBookContainer = () => {
             {libraryBooks.map((book) => (
               <div key={book.id} className="library-book-item">
                 <img
-                  src={book.volumeInfo.imageLinks.smallThumbnail}
+                  src={
+                    book.volumeInfo?.imageLinks?.smallThumbnail ||
+                    "https://placehold.co/150x220?text=Image%20Not%20Available"
+                  }
                   alt={book.volumeInfo.title}
                   className="fav-book-image"
                 />
