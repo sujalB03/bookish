@@ -98,7 +98,7 @@
   margin-right: 16px;
   display: inline-block;
 }
-.detailSection_list li span {
+.buy-span {
   color: #353935;
 }
 
@@ -173,7 +173,10 @@
 .buy-book-button {
   border-radius: 5px;
 }
-
+.not-available {
+  color: #9c9c9c;
+  cursor: not-allowed;
+}
 /* Responsive for smaller screens than 768 */
 @media (max-width: 768px) {
   .overview-list-container {
