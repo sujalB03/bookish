@@ -25,20 +25,6 @@ import editIcon from "../../assets/edit-img.svg";
 import { Country, State } from "country-state-city";
 import Select from "react-select";
 
-// const avatars = [
-//   "https://api.dicebear.com/7.x/lorelei/svg?seed=1",
-//   "https://api.dicebear.com/7.x/lorelei/svg?seed=2",
-//   "https://api.dicebear.com/7.x/lorelei/svg?seed=3",
-//   "https://api.dicebear.com/7.x/lorelei/svg?seed=4",
-//   "https://api.dicebear.com/7.x/lorelei/svg?seed=5",
-//   "https://api.dicebear.com/7.x/lorelei/svg?seed=6",
-//   "https://api.dicebear.com/7.x/lorelei/svg?seed=7",
-//   "https://api.dicebear.com/7.x/lorelei/svg?seed=8",
-//   "https://api.dicebear.com/7.x/lorelei/svg?seed=9",
-//   "https://api.dicebear.com/7.x/lorelei/svg?seed=10",
-//   "https://api.dicebear.com/7.x/lorelei/svg?seed=11",
-//   "https://api.dicebear.com/7.x/lorelei/svg?seed=12",
-// ];
 const Profile = () => {
   const user = useContext(UserContext);
   const navigate = useNavigate();
@@ -525,7 +511,10 @@ const Profile = () => {
                       className="recent-book-card"
                     >
                       <img
-                        src={book.volumeInfo.imageLinks?.thumbnail}
+                        src={
+                          book.volumeInfo.imageLinks?.thumbnail ||
+                          "https://placehold.co/160x200?text=Image%20Not%20Available"
+                        }
                         alt={book.volumeInfo.title}
                       />
                       <p title={book.volumeInfo.title}>
@@ -556,7 +545,7 @@ const Profile = () => {
                     <img
                       src={
                         book.volumeInfo?.imageLinks?.thumbnail ||
-                        "placeholder.jpg"
+                         "https://placehold.co/100x140?text=Image%20Not%20Available"
                       }
                       alt={book.volumeInfo?.title || "No Title"}
                     />
