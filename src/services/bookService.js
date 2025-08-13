@@ -28,7 +28,7 @@ export const fetchBooks = async ({
   // console.log("Final API Query:", query);
   try {
     const response = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes/`,
+      `https://www.googleapis.com/books/v1/volumes`,
       {
         params: {
           q: query,
