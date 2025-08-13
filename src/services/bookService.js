@@ -33,7 +33,6 @@ export const fetchBooks = async ({
         params: {
           q: query,
           inlanguage,
-          ...(applyFilter && { filter: "paid-ebooks" }), // Apply filter only if needed
           startIndex,
           orderBy,
           maxResults,
@@ -52,17 +51,17 @@ export const fetchBooks = async ({
         book.saleInfo.listPrice?.amount !== 0
           ? book.saleInfo.listPrice?.currencyCode
             ? getSymbolFromCurrency(book.saleInfo.listPrice.currencyCode)
-            : null
+            : " "
           : "", // Get currency symbol if available
       price:
         book.saleInfo.listPrice?.amount !== undefined
           ? book.saleInfo.listPrice?.amount !== 0
             ? `${book.saleInfo.listPrice.amount}`
             : "Free eBook"
-          : "Free",
+          : "See details for purchase options",
       image: book.volumeInfo.imageLinks
         ? book.volumeInfo.imageLinks.thumbnail
-        : "https://via.placeholder.com/150", // Placeholder image if no cover available
+        : "https://placehold.co/170x220?text=Image%20Not%20Available", // Placeholder image if no cover available
       preview: book.volumeInfo.previewLink,
     }));
     // console.log(fetchedBooks);
