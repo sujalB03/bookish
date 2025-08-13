@@ -227,8 +227,11 @@ const DetailsSection = () => {
               </div>
 
               <div className="detailSection_book-cover-container">
-                <img
-                  src={imageLinks.thumbnail}
+               <img
+                  src={
+                    book.volumeInfo?.imageLinks?.thumbnail ||
+                    "https://placehold.co/150?text=Image%20Not%20Available"
+                  }
                   alt="Book Cover"
                   className="detailSection_book-cover"
                 />
@@ -330,10 +333,18 @@ const DetailsSection = () => {
                           className="buy-book-icon"
                         />
                       </div>
-                      <span>Google Play</span>
+                     <span className="buy-span">Google Play</span>
                     </div>
-                    <div className="buy-book-button flex">
-                      <span>Buy eBook</span>
+                    <div
+                      className={
+                        (!buyLink && "not-available") + " buy-book-button flex"
+                      }
+                    >
+                      <span
+                        className={"buy-span " + (!buyLink && "not-available")}
+                      >
+                        {buyLink ? "Buy eBook" : "Not Available"}
+                      </span>
                     </div>
                   </a>
                 </li>
@@ -352,10 +363,10 @@ const DetailsSection = () => {
                           className="buy-book-icon"
                         />
                       </div>
-                      <span>Flipkart</span>
+                     <span className="buy-span">Flipkart</span>
                     </div>
                     <div className="buy-book-button">
-                      <span>Buy on Flipkart</span>
+                      <span className="buy-span">Buy on Flipkart</span>
                     </div>
                   </a>
                 </li>
@@ -374,10 +385,10 @@ const DetailsSection = () => {
                           className="buy-book-icon"
                         />
                       </div>
-                      <span>Amazon</span>
+                      <span className="buy-span">Amazon</span>
                     </div>
                     <div className="buy-book-button">
-                      <span>Buy on Amazon</span>
+                        <span className="buy-span">Buy on Amazon</span>
                     </div>
                   </a>
                 </li>
